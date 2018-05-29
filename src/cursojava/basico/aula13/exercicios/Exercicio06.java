@@ -13,7 +13,7 @@ public class Exercicio06 {
 		System.out.print("Informe o raio do círculo: ");
 		double r = scan.nextDouble();
 		
-		//Área do círculo = π.r²
+		//Área do círculo = π*r²
 		System.out.print("A área do círculo é: " + (3.14*(r*r)) + "cm");
 	}
 
