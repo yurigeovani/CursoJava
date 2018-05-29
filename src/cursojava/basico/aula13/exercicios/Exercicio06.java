@@ -14,7 +14,7 @@ public class Exercicio06 {
 		double r = scan.nextDouble();
 		
 		//Área do círculo = π*r²
-		System.out.print("A área do círculo é: " + (3.14*(r*r)) + "cm");
+		System.out.print("A área do círculo é: " + (Math.PI*Math.pow(r, 2)) + "cm");
 	}
 
 }

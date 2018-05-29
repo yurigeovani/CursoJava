@@ -12,7 +12,7 @@ public class Exercicio07 {
 		
 		System.out.println("Informe o tamanho do lado do quadrado: ");
 		double lado = scan.nextDouble();
-		double area = lado * lado;
+		double area = Math.pow(lado, 2);
 		
 		System.out.println("A área do quadrado é: " + area);
 		System.out.println("O dobro desta área é: " + area * 2);

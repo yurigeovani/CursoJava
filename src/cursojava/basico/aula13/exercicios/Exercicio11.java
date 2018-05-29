@@ -21,7 +21,7 @@ public class Exercicio11 {
 		
 		System.out.println("a) " + ((num1*2)*(num2/2)));
 		System.out.println("b) " + ((num1*3)+num3));
-		System.out.println("c) " + ((num3*num3)*num3));
+		System.out.println("c) " + Math.pow(num3, 3));
 	}
 
 }
