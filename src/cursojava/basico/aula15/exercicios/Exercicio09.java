@@ -20,22 +20,55 @@ public class Exercicio09 {
 		
 		if (num1<num2 && num1<num3) {
 			if (num2<num3) {
-				System.out.println("Números decrescente: " + num3 + ", " + num2 + ", " + num1);
+				System.out.println("Números decrescente: num3 " + num3 + ", num2 " + num2 + ", num1 " + num1);
 			} else {
-				System.out.println("Números decrescente: " + num2 + ", " + num3 + ", " + num1);
-			} 
+				if(num2==num3) {
+					System.out.println("Números decrescente: num2 = num3: " + num2 + ", num1 " + num1);
+				} else {
+					System.out.println("Números decrescente: num2 " + num2 + ", num3 " + num3 + ", num1 " + num1);
+				}
+			}
+
 		} else if (num2<num3 && num2<num1) {
 			if (num3<num1) {
-				System.out.println("Números decrescente: " + num1 + ", " + num3 + ", " + num2);
+				System.out.println("Números decrescente: num1 " + num1 + ", num3 " + num3 + ", num2 " + num2);
 			} else {
-				System.out.println("Números decrescente: " + num3 + ", " + num1 + ", " + num2);
+				if(num1==num3) {
+					System.out.println("Números decrescente: num1 = num3: " + num1 + ", num2 " + num2);
+				} else {
+					System.out.println("Números decrescente: num3 " + num3 + ", num1 " + num1 + ", num2 " + num2);
+				}
+			}
+		} else if (num3<num1 && num3<num2) {
+			if (num1<num2) {
+				System.out.println("Números decrescente: num2 " + num2 + ", num1 " + num1 + ", num3 " + num3);
+			} else {
+				if(num1==num2) {
+					System.out.println("Números decrescente: num1 = num2: " + num1 + ", num3 " + num3);
+				} else {
+					System.out.println("Números decrescente: num1 " + num1 + ", num2 " + num2 + ", num3 " + num3);
+				}
+			}
+		} else if(num1==num2) {
+			if (num1<num3) {
+				System.out.println("Números decrescente: num3 " + num3 + ", num1 = num2: " + num1);
+			} else if (num3<num1){
+				System.out.println("Números decrescente: num1 = num2: " + num1 + ", num3 " + num3);
+			}
+		} else if (num1==num3) {
+			if (num1<num2) {
+				System.out.println("Números decrescente: num2 " + num2 + ", num1 = num3: " + num3);
+			} else {
+				System.out.println("Números decrescente: num1 = num3: " + num1 + ", num2 " + num2);
+			}
+		} else if (num2==num3) {
+			if (num2<num1) {
+				System.out.println("Números decrescente: num1 " + num1 + ", num2 = num3: " + num2);
+			} else {
+				System.out.println("Números decrescente: num2 = num3: " + num2 + ", num1 " + num1);
 			}
 		} else {
-			if (num1<num2) {
-				System.out.println("Números decrescente: " + num1 + ", " + num2 + ", " + num3);
-			} else {
-				System.out.println("Números decrescente: " + num2 + ", " + num1 + ", " + num3);
-			}
+			System.out.println("Todos os números são iguais: " + num1);
 		}
 
 	}
