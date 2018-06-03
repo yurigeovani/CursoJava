@@ -19,7 +19,7 @@ public class Exercicio19 {
 		System.out.print("Informe o segundo número: ");
 		double num2 = scan.nextDouble();
 		System.out.print("Informe a operação a ser utilizada: ");
-		String operacao = scan.nextLine();
+		String operacao = scan.next();
 		
 		double resultado =0;
 	
