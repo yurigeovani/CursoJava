@@ -1,3 +1,4 @@
+package cursojava.basico.aula06;
 class Argumentos {
 
 	public static void main (String[] args){
