@@ -22,7 +22,7 @@ public class Exercicio19 {
 		String operacao = scan.nextLine();
 		
 		double resultado =0;
-		
+	
 		switch (operacao) {
 		case "+":resultado=num1+num2; break;
 		case "-":resultado=num1-num2; break;
