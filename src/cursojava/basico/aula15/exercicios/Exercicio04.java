@@ -14,19 +14,23 @@ public class Exercicio04 {
 		System.out.print("Informe a letra: ");
 		String letra = scan.nextLine();
 		
-		switch (letra) {
-		case "a": 
-		case "A": 
-		case "e": 
-		case "E": 
-		case "i": 
-		case "I": 
-		case "o": 
-		case "O": 
-		case "u": 
-		case "U": System.out.println("Vogal!"); break;
-		default: System.out.println("É consoante");
-			break;
+		if(letra.length()>1) {
+			System.out.println("Não é uma letra válida!");
+		} else {
+			switch (letra) {
+			case "a": 
+			case "A": 
+			case "e": 
+			case "E": 
+			case "i": 
+			case "I": 
+			case "o": 
+			case "O": 
+			case "u": 
+			case "U": System.out.println("Vogal!"); break;
+			default: System.out.println("É consoante");
+				break;
+			}
 		}
 	}
 

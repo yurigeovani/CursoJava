@@ -75,11 +75,10 @@ public class Exercicio23 {
 		if (cartao.equalsIgnoreCase("S")) {
 			desconto = valor*5/100;
 			total = valor - desconto;
-			System.out.println("Total = R$ " + total);
 		} else {
 			total = valor;
-			System.out.println("Total = R$ " + total);
 		}
+		System.out.println("Total = R$ " + total);
 	}
 
 }

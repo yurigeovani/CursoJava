@@ -31,37 +31,20 @@ public class Exercicio11 {
 
 		if(sal<=280) {
 			percentual = 20;
-			aumento = sal*percentual/100;
-			salAtual = sal + aumento;
-			System.out.println("Salário antes do ajuste: R$ " + sal);
-			System.out.println("Percentual aplicado: " + percentual + "%");
-			System.out.println("Valor do aumento: R$ " + aumento);
-			System.out.println("Novo salário: R$ " + salAtual);
 		} else if (sal<=700) {
 			percentual = 15;
-			aumento = sal*percentual/100;
-			salAtual = sal + aumento;
-			System.out.println("Salário antes do ajuste: R$ " + sal);
-			System.out.println("Percentual aplicado: " + percentual + "%");
-			System.out.println("Valor do aumento: R$ " + aumento);
-			System.out.println("Novo salário: R$ " + salAtual);
 		} else if (sal<=1500) {
 			percentual = 10;
-			aumento = sal*percentual/100;
-			salAtual = sal + aumento;
-			System.out.println("Salário antes do ajuste: R$ " + sal);
-			System.out.println("Percentual aplicado: " + percentual + "%");
-			System.out.println("Valor do aumento: R$ " + aumento);
-			System.out.println("Novo salário: R$ " + salAtual);
 		} else {
 			percentual = 5;
-			aumento = sal*percentual/100;
-			salAtual = sal + aumento;
-			System.out.println("Salário antes do ajuste: R$ " + sal);
-			System.out.println("Percentual aplicado: " + percentual + "%");
-			System.out.println("Valor do aumento: R$ " + aumento);
-			System.out.println("Novo salário: R$ " + salAtual);
 		}
+		aumento = sal*percentual/100;
+		salAtual = sal + aumento;
+		System.out.println("Salário antes do ajuste: R$ " + sal);
+		System.out.println("Percentual aplicado: " + percentual + "%");
+		System.out.println("Valor do aumento: R$ " + aumento);
+		System.out.println("Novo salário: R$ " + salAtual);
+
 		
 	}
 

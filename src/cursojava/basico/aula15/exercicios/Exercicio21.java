@@ -34,23 +34,19 @@ public class Exercicio21 {
 		if (combustivel.equalsIgnoreCase("A")) {
 			if (litro<=20) {
 				valor = litro*(alcool-(alcool*3/100));
-				System.out.println("Valor a ser pago: R$ " + valor);
 			} else {
 				valor = litro*(alcool-(alcool*4/100));
-				System.out.println("Valor a ser pago: R$ " + valor);
 			}
 		} else if (combustivel.equalsIgnoreCase("G")) {
 			if (litro<=20) {
 				valor = litro*(gasolina-(gasolina*3/100));
-				System.out.println("Valor a ser pago: R$ " + valor);
 			} else {
 				valor = litro*(gasolina-(gasolina*4/100));
-				System.out.println("Valor a ser pago: R$ " + valor);
 			}
-
 		} else {
 			System.out.println("Informe um combustível válido!");
 		}
+		System.out.println("Valor a ser pago: R$ " + valor);
 	}
 
 }
