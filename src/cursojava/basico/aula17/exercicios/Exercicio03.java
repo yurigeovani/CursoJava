@@ -15,6 +15,8 @@ public class Exercicio03 {
 
 		Scanner scan = new Scanner(System.in);
 		
+		System.out.println();
+		
 		
 	}
 
