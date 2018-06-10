@@ -14,9 +14,7 @@ public class Exercicio03 {
 //			e. Estado Civil: 's', 'c', 'v', 'd';
 
 		Scanner scan = new Scanner(System.in);
-		
-		System.out.println();
-		
+				
 		
 	}
 
