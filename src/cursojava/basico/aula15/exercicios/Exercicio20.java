@@ -35,24 +35,22 @@ public class Exercicio20 {
 		
 		int cont = 0;
 		
-		if (a=="S" || a=="s") {
+		if (a.equalsIgnoreCase("S")) {
 			cont++;
 		} 
-		if (b=="S" || b=="s") {
+		if (b.equalsIgnoreCase("S")){
 			cont++;
 		} 
-		if (c=="S" || c=="s") {
+		if (c.equalsIgnoreCase("S")) {
 			cont++;
 		}
-		if (d=="S" || d=="s") {
+		if (d.equalsIgnoreCase("S")) {
 			cont++;
 		} 
-		if (e=="S" || e=="s") {
+		if (e.equalsIgnoreCase("S")) {
 			cont++;
 		} 
-		
-		System.out.println("cont " + cont);
-		
+				
 		switch (cont) {
 		case 2: System.out.println("Suspeita!"); break;
 		case 3:

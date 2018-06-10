@@ -43,46 +43,23 @@ public class Exercicio12 {
 		
 		if(salBruto <= 900) {
 			ir=salBruto*0/100;
-			totalDescontos = ir + inss;
-			salLiquido =  salBruto-totalDescontos;
-			System.out.println("Salário Bruto (R$ " + valorHora + " * " + horasTrabalhadas + "h) = R$ " + salBruto);
-			System.out.println("(-) IR (ISENTO) = R$ " + ir);
-			System.out.println("(-) INSS (10%) = R$ " + inss);
-			System.out.println("FGTS (11%) = R$ " + fgts);
-			System.out.println("Total de descontos: R$ " + totalDescontos);
-			System.out.println("Salário líquido: R$ " + salLiquido);
 		} else if(salBruto <= 1500) {
 			ir=salBruto*5/100;
-			totalDescontos = ir + inss;
-			salLiquido =  salBruto-totalDescontos;
-			System.out.println("Salário Bruto (R$ " + valorHora + " * " + horasTrabalhadas + "h) = R$ " + salBruto);
-			System.out.println("(-) IR = R$ " + ir);
-			System.out.println("(-) INSS (10%) = R$ " + inss);
-			System.out.println("FGTS (11%) = R$ " + fgts);
-			System.out.println("Total de descontos: R$ " + totalDescontos);
-			System.out.println("Salário líquido: R$ " + salLiquido);
 		} else if(salBruto <= 2500) {
 			ir=salBruto*10/100;
-			totalDescontos = ir + inss;
-			salLiquido =  salBruto-totalDescontos;
-			System.out.println("Salário Bruto (R$ " + valorHora + " * " + horasTrabalhadas + "h) = R$ " + salBruto);
-			System.out.println("(-) IR = R$ " + ir);
-			System.out.println("(-) INSS (10%) = R$ " + inss);
-			System.out.println("FGTS (11%) = R$ " + fgts);
-			System.out.println("Total de descontos: R$ " + totalDescontos);
-			System.out.println("Salário líquido: R$ " + salLiquido);
 		} else {
-			ir=salBruto*20/100;
-			totalDescontos = ir + inss;
-			salLiquido =  salBruto-totalDescontos;
-			System.out.println("Salário Bruto (R$ " + valorHora + " * " + horasTrabalhadas + "h) = R$ " + salBruto);
-			System.out.println("(-) IR = R$ " + ir);
-			System.out.println("(-) INSS (10%) = R$ " + inss);
-			System.out.println("FGTS (11%) = R$ " + fgts);
-			System.out.println("Total de descontos: R$ " + totalDescontos);
-			System.out.println("Salário líquido: R$ " + salLiquido);
-			
+			ir=salBruto*20/100;			
 		}
+		
+		totalDescontos = ir + inss;
+		salLiquido =  salBruto-totalDescontos;
+		System.out.println("Salário Bruto (R$ " + valorHora + " * " + horasTrabalhadas + "h) = R$ " + salBruto);
+		System.out.println("(-) IR = R$ " + ir);
+		System.out.println("(-) INSS (10%) = R$ " + inss);
+		System.out.println("FGTS (11%) = R$ " + fgts);
+		System.out.println("Total de descontos: R$ " + totalDescontos);
+		System.out.println("Salário líquido: R$ " + salLiquido);
+
 	}
 
 }
