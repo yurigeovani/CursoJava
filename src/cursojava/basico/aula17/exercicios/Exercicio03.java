@@ -14,8 +14,80 @@ public class Exercicio03 {
 //			e. Estado Civil: 's', 'c', 'v', 'd';
 
 		Scanner scan = new Scanner(System.in);
-				
+
+		String nome = "";
+		int idade = 0;
+		double salario = 0;
+		String sexo = "";
+		String estadoCivil = "";
 		
+		boolean validaNome = false;
+		boolean validaIdade = false;
+		boolean validaSalario = false;
+		boolean validaSexo = false;
+		boolean validaEstado = false;
+		
+		while (!validaNome) {
+			System.out.print("Informe um nome: ");
+			nome = scan.next();
+			
+			if (nome.length()<=3) {
+				System.out.println("Informe um nome com mais de 3 caracteres!");
+			} else {
+				validaNome = true;
+			}
+		}
+		
+		while (!validaIdade) {
+			System.out.print("Informe a idade: ");
+			idade = scan.nextInt();
+			
+			if (idade<0 || idade>150) {
+				System.out.println("Informe uma idade válida: ");
+			} else {
+				validaIdade = true;
+			}
+		}
+		
+		while(!validaSalario) {
+			System.out.print("Informe o salário: ");
+			salario = scan.nextDouble();
+			
+			if (salario<=0) {
+				System.out.println("Informe um salário válido!");
+			} else {
+				validaSalario = true;
+			}
+		}
+		
+		while(!validaSexo) {
+			System.out.print("Informe o sexo: ");
+			sexo = scan.next();
+			
+			if (sexo.equalsIgnoreCase("f") || sexo.equalsIgnoreCase("m")) {
+				validaSexo = true;
+			} else {
+				System.out.println("Informe um sexo válido!");
+			}
+		}
+		
+		while(!validaEstado) {
+			System.out.print("Informe o estado civil: ");
+			estadoCivil = scan.next();
+			
+			if (estadoCivil.equalsIgnoreCase("s") || estadoCivil.equalsIgnoreCase("c")
+					|| estadoCivil.equalsIgnoreCase("d") || estadoCivil.equalsIgnoreCase("v")) {
+				validaEstado = true;
+			} else {
+				System.out.println("Informe um estado civil válido!");
+			}
+		}
+		
+		System.out.println("Nome: " + nome);
+		System.out.println("Idade: " + idade);
+		System.out.println("Salário: R$ " + salario);
+		System.out.println("Sexo: " + sexo);
+		System.out.println("Estado Civil: " + estadoCivil);
 	}
 
 }
