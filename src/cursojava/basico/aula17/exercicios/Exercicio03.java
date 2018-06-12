@@ -21,63 +21,67 @@ public class Exercicio03 {
 		String sexo = "";
 		String estadoCivil = "";
 		
-		boolean validaNome = false;
-		boolean validaIdade = false;
-		boolean validaSalario = false;
-		boolean validaSexo = false;
-		boolean validaEstado = false;
+		boolean validacao = false;
+//		boolean validaIdade = false;
+//		boolean validaSalario = false;
+//		boolean validaSexo = false;
+//		boolean validaEstado = false;
 		
-		while (!validaNome) {
+		while (!validacao) {
 			System.out.print("Informe um nome: ");
 			nome = scan.next();
 			
 			if (nome.length()<=3) {
 				System.out.println("Informe um nome com mais de 3 caracteres!");
 			} else {
-				validaNome = true;
+				validacao = true;
 			}
 		}
 		
-		while (!validaIdade) {
+		validacao = false;
+		while (!validacao) {
 			System.out.print("Informe a idade: ");
 			idade = scan.nextInt();
 			
 			if (idade<0 || idade>150) {
 				System.out.println("Informe uma idade válida: ");
 			} else {
-				validaIdade = true;
+				validacao = true;
 			}
 		}
 		
-		while(!validaSalario) {
+		validacao = false;
+		while(!validacao) {
 			System.out.print("Informe o salário: ");
 			salario = scan.nextDouble();
 			
 			if (salario<=0) {
 				System.out.println("Informe um salário válido!");
 			} else {
-				validaSalario = true;
+				validacao = true;
 			}
 		}
 		
-		while(!validaSexo) {
+		validacao = false;
+		while(!validacao) {
 			System.out.print("Informe o sexo: ");
 			sexo = scan.next();
 			
 			if (sexo.equalsIgnoreCase("f") || sexo.equalsIgnoreCase("m")) {
-				validaSexo = true;
+				validacao = true;
 			} else {
 				System.out.println("Informe um sexo válido!");
 			}
 		}
 		
-		while(!validaEstado) {
+		validacao = false;
+		while(!validacao) {
 			System.out.print("Informe o estado civil: ");
 			estadoCivil = scan.next();
 			
 			if (estadoCivil.equalsIgnoreCase("s") || estadoCivil.equalsIgnoreCase("c")
 					|| estadoCivil.equalsIgnoreCase("d") || estadoCivil.equalsIgnoreCase("v")) {
-				validaEstado = true;
+				validacao = true;
 			} else {
 				System.out.println("Informe um estado civil válido!");
 			}

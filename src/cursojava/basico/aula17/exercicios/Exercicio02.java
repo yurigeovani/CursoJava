@@ -12,13 +12,15 @@ public class Exercicio02 {
 
 		Scanner scan = new Scanner(System.in);
 		
+		String user;
+		String pass;
 		boolean validaSenha = false;
 		
 		while (!validaSenha) {
 			System.out.print("Informe o usuário: ");
-			String user = scan.next();
+			user = scan.next();
 			System.out.print("Informe a senha: ");
-			String pass = scan.next();
+			pass = scan.next();
 			
 			if (user.equals(pass)) {
 				System.out.println("Acesso negado! Nome de usuário igual à senha.");

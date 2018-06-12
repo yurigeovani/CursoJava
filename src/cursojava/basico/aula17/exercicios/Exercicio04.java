@@ -11,13 +11,13 @@ public class Exercicio04 {
 //		necessários para que a população do país A ultrapasse ou iguale a
 //		população do país B, mantidas as taxas de crescimento.
 		
-		double paisA = 80000;
-		double paisB = 200000;
+		int paisA = 80000;
+		int paisB = 200000;
 		int anos = 0;
 		
 		while(paisA<paisB) {
-			paisA += (paisA*3/100);
-			paisB += (paisB*1.5/100);
+			paisA += paisA*3/100;
+			paisB += paisB*1.5/100;
 			anos++;
 		}
 		
