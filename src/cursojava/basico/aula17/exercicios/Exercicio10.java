@@ -16,8 +16,16 @@ public class Exercicio10 {
 		System.out.print("Informe o segundo número: ");
 		int num2 = scan.nextInt();
 		
-		for (int i = num1; i<=num2; i++) {
-			System.out.println("O número é " + i);
+		if (num1<num2) {
+			for (int i = num1+1; i<=num2-1; i++) {
+				System.out.println("O número é " + i);
+			}
+		} else if (num2<num1) {
+			for (int i = num2+1; i<=num1-1; i++) {
+				System.out.println("O número é " + i);
+			}
+		} else {
+			System.out.println("Os números são iguais!");
 		}
 		
 	}
