@@ -28,11 +28,11 @@ public class Exercicio20 {
 		media = contador/qtdidades;
 		
 		if (media<=25) {
-			System.out.println("Turma jovem!");
+			System.out.println("Turma jovem: " + media + "!");
 		} else if (media<=60) {
-			System.out.println("Turma adulta!");
+			System.out.println("Turma adulta: " + media + "!");
 		} else if (media>60){
-			System.out.println("Turma idosa!");
+			System.out.println("Turma idosa: " + media + "!");
 		}
 		
 	}
