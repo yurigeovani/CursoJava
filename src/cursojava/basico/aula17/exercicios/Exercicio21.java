@@ -12,26 +12,25 @@ public class Exercicio21 {
 
 		Scanner scan = new Scanner(System.in);
 		
-		boolean validador = false;
 		int medAlunos = 0;
 		int qtdAlunos = 0;
+		int totalAlunos = 0;
 
 		System.out.print("Informe a quantidade de turmas: ");
-		int turmas = scan.nextInt();
+		int qtdTurmas = scan.nextInt();
 		
-		for (int i = 1; i<=turmas; i++) {
-			while(!validador) {
-				System.out.print("Informe a quantidade de alunos da turma " + i + ": ");
-				qtdAlunos = scan.nextInt();
-				if (qtdAlunos>0 && qtdAlunos<=40) {
-					validador = true;
-				} else {
-					System.out.println("Quantidade inválida!");
-				}
+		for (int i = 1; i<=qtdTurmas; i++) {
+			System.out.print("Informe a quantidade de alunos da turma " + i + ": ");
+			qtdAlunos = scan.nextInt();
+			if (qtdAlunos<=0 || qtdAlunos>40) {
+				System.out.println("Quantidade inválida!");
+				i--;
+			} else {
+				totalAlunos += qtdAlunos;
 			}
 		}
 
-		medAlunos = qtdAlunos/turmas;
+		medAlunos = totalAlunos/qtdTurmas;
 		System.out.println("A média de alunos por turma é: " + medAlunos);
 		
 	}
