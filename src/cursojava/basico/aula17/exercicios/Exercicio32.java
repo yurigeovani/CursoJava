@@ -39,7 +39,7 @@ public class Exercicio32 {
 					vlrProd = 1.20;
 					break;
 				case 101:
-					descProd = "Bauru Simples";
+					descProd = "Bauru simples";
 					vlrProd = 1.30;
 					break;
 				case 102:
