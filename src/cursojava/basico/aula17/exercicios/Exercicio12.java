@@ -35,20 +35,6 @@ public class Exercicio12 {
 			}
 		}
 		
-//		validador=false;
-//		while(!validador) {
-//			
-//			System.out.print("Informe o segundo número desejado [1-10]: ");
-//			num2 = scan.nextInt();
-//			
-//			if(num2>=1 && num2<=10) {
-//				validador = true;
-//			} else {
-//				System.out.println("Número inválido! Informe um número de 1 a 10!");
-//			}
-//		}
-		
-		
 		validador=false;
 		while(!validador) {
 			

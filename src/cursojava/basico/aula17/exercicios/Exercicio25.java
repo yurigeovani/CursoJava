@@ -6,16 +6,16 @@ public class Exercicio25 {
 
 	public static void main(String[] args) {
 
-//		25. O Sr. Manoel Joaquim expandiu seus negócios para além dos
-//		negócios de 1,99 e agora possui uma loja de conveniências. Faça um
+//		25. O Sr. Manoel Joaquim expandiu seus negÃ³cios para alÃ©m dos
+//		negÃ³cios de 1,99 e agora possui uma loja de conveniÃªncias. FaÃ§a um
 //		programa que implemente uma caixa registradora rudimentar. O
-//		programa deverá receber um número desconhecido de valores
-//		referentes aos preços das mercadorias. Um valor zero deve ser
+//		programa deverÃ¡ receber um nÃºmero desconhecido de valores
+//		referentes aos preÃ§os das mercadorias. Um valor zero deve ser
 //		informado pelo operador para indicar o final da compra. O programa
-//		deve então mostrar o total da compra e perguntar o valor em dinheiro
-//		que o cliente forneceu, para então calcular e mostrar o valor do troco.
-//		Após esta operação, o programa deverá voltar ao ponto inicial, para
-//		registrar a próxima compra. A saída deve ser conforme o exemplo
+//		deve entÃ£o mostrar o total da compra e perguntar o valor em dinheiro
+//		que o cliente forneceu, para entÃ£o calcular e mostrar o valor do troco.
+//		ApÃ³s esta operaÃ§Ã£o, o programa deverÃ¡ voltar ao ponto inicial, para
+//		registrar a prÃ³xima compra. A saÃ­da deve ser conforme o exemplo
 //		abaixo:
 //		Lojas Tabajara
 //		Produto 1: R$ 2.20
@@ -28,16 +28,21 @@ public class Exercicio25 {
 				
 		Scanner scan = new Scanner (System.in);
 		
-		double vlrProduto = 0;
+		double vlrProduto = 1;
 		double vlrTotal = 0; 
 		
-		while (vlrProduto!=0) {
-			for(int i = 1; i>0; i++) {
-				
-				System.out.print("Produto " + i + ": R$ " + vlrProduto);
-				vlrTotal += vlrProduto;
-			}
-			
+		System.out.println("Lojas Tabajara");
+		for(int i = 1; vlrProduto > 0; i++) {
+			System.out.print("Produto " + i + ": R$ ");
+			vlrProduto = scan.nextDouble();
+			vlrTotal += vlrProduto;
+		}
+
+		System.out.println("Total: R$ " + vlrTotal);
+		System.out.print("Informe o valor em dinheiro: R$");
+		double dinheiro = scan.nextDouble();
+		if (dinheiro>vlrTotal) {
+			System.out.println("Troco: R$" + (dinheiro-vlrTotal));
 		}
 	}
 
