@@ -32,7 +32,7 @@ public class Exercicio15 {
 			System.out.print("0, 1");
 			anterior = 0;
 			atual = 1;
-			for(int i=2;i<=termo;i++) {
+			for(int i=2;i<termo;i++) {
 				proximo = anterior + atual;
 				System.out.print(", " + proximo);
 				anterior = atual;

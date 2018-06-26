@@ -22,10 +22,6 @@ public class Exercicio03 {
 		String estadoCivil = "";
 		
 		boolean validacao = false;
-//		boolean validaIdade = false;
-//		boolean validaSalario = false;
-//		boolean validaSexo = false;
-//		boolean validaEstado = false;
 		
 		while (!validacao) {
 			System.out.print("Informe um nome: ");

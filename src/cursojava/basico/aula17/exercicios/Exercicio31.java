@@ -1,5 +1,6 @@
 package cursojava.basico.aula17.exercicios;
 
+import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
@@ -29,9 +30,11 @@ public class Exercicio31 {
 		double aumento = 1.5;
 		double salAtual = 0;
 		
+		//DecimalFormat dinheiro = new DecimalFormat("###,###.##");
+		
 		for (int i = anoInicial+1; i<=anoAtual.get(Calendar.YEAR);i++) {
 			salAtual += salInicial*aumento/100;
-			System.out.println("Salário em " + i + ": R$ " + salAtual + ", Aumento de " + aumento + "%");
+			System.out.println("Salário em " + i + ": R$ " + salAtual/*.format(salAtual)*/+ ", Aumento de " + aumento + "%");
 			aumento*=2;
 		}
 		

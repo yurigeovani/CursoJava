@@ -19,7 +19,6 @@ public class Exercicio05 {
 		int anos = 0;
 		
 		boolean validacao = false;
-//		boolean validaPaisB = false;
 		
 		while (!validacao) {
 			System.out.print("Informe a população do País A: ");
@@ -69,23 +68,12 @@ public class Exercicio05 {
 		}
 
 		
-//		if (paisA<paisB) {
 			while(paisA<paisB) {
 				paisA += paisA/100*taxaA;
 				paisB += paisB/100*taxaB;
 				anos++;
 			}
 
-//		}
-		
-//		if (paisB<paisA) {
-//			while(paisB<paisA) {
-//				paisA += paisA/100*taxaA;
-//				paisB += paisB/100*taxaA;
-//				anos++;
-//			}
-//
-//		}
 
 		System.out.println("População A: " + paisA);
 		System.out.println("População B: " + paisB);
