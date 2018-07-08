@@ -1,7 +1,5 @@
 package cursojava.basico.aula19;
 
-import sun.security.util.Length;
-
 public class Arrays {
 
 	public static void main(String[] args) {
