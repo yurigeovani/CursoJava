@@ -27,6 +27,9 @@ public class Exercicio25 {
 			} else {
 				vetorB[i]=0;
 			}
+			// Operador Ternário:
+			// vetorB[i] = (vetorA[i] % 2 == 0) ? 1:0;
+			// vetorB recebe: if(vetorA[i]%2==0, recebe 1, se ñ, recebe 0
 		}
 		
 		for(int i=0; i<vetorA.length; i++) {

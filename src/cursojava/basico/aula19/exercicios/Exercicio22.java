@@ -17,7 +17,7 @@ public class Exercicio22 {
 		
 		System.out.println("Números aleatórios: ");
 		for(int i=0; i<vetor.length; i++) {
-			vetor[i] = (int) Math.round(Math.random()*1);
+			vetor[i] = (int) Math.round(Math.random());
 			System.out.println(vetor[i]);
 		}
 		for(int i=0; i<vetor.length; i++) {

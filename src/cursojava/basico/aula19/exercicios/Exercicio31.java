@@ -13,7 +13,7 @@ public class Exercicio31 {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		int[] vetorA = new int[10];
+		int[] vetorA = new int[20];
 		int[] vetorB = new int[vetorA.length];
 		int posB = 0;
 		
