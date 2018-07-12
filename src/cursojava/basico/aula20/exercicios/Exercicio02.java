@@ -15,45 +15,46 @@ public class Exercicio02 {
 		Random numeroRandom = new Random();
 		int maior = Integer.MIN_VALUE;
 		int menor = Integer.MAX_VALUE;
-//		int linha5 = 5;
-//		int col7 = 7;
 		
 		for(int i=0; i<numerosAleatorios.length; i++) {
-			System.out.println("Linha: " + i);
+			System.out.println("Linha: " + (i+1));
 			for(int j=0; j<numerosAleatorios[i].length; j++) {
 				numerosAleatorios[i][j] = numeroRandom.nextInt(100);
-				System.out.println("Coluna " + j + ": " + numerosAleatorios[i][j]);
+				System.out.println("Coluna " + (j+1) + ": " + numerosAleatorios[i][j]);
 			}
 		}
 		
 		for(int i=0; i<numerosAleatorios.length; i++) {
 			for(int j=0; j<numerosAleatorios[i].length; j++) {
-				if(numerosAleatorios[4][j]>maior) {
-					maior = numerosAleatorios[4][j];
-					System.out.println("Maior valor da linha " + i + ", coluna " + j + ": " + maior);
+				if(i == 4 && numerosAleatorios[i][j]>maior) {
+					maior = numerosAleatorios[i][j];
 				}
-				if(numerosAleatorios[4][j]<menor) {
-					menor = numerosAleatorios[4][j];
-					System.out.println("Menor valor da linha " + i + ", coluna " + j + ": " + menor);
+				if(i == 4 && numerosAleatorios[i][j]<menor) {
+					menor = numerosAleatorios[i][j];
 				}
 			}
 		}
-		
+
+		System.out.println("Maior valor da linha 5: " + maior);
+		System.out.println("Menor valor da linha 5: " + menor);
+
 		maior = Integer.MIN_VALUE;
 		menor = Integer.MAX_VALUE;
 		
 		for(int i=0; i<numerosAleatorios.length; i++) {
 			for(int j=0; j<numerosAleatorios[i].length; j++) {
-				if(numerosAleatorios[i][7]>maior) {
-					maior = numerosAleatorios[i][7];
-					System.out.println("Maior valor da linha " + i + ", coluna " + j + ": " + maior);
+				if(j == 6 && numerosAleatorios[i][j]>maior) {
+					maior = numerosAleatorios[i][j];
 				}
-				if(numerosAleatorios[i][7]<menor) {
-					menor = numerosAleatorios[i][7];
-					System.out.println("Menor valor da linha " + i + ", coluna " + j + ": " + menor);
+				if(j == 6 && numerosAleatorios[i][j]<menor) {
+					menor = numerosAleatorios[i][j];
 				}
 			}
-		}		
+		}	
+		
+		System.out.println("Maior valor da coluna 7: " + maior);
+		System.out.println("Menor valor da coluna 7: " + menor);
+
 		
 	}
 
