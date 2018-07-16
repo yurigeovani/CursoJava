@@ -20,7 +20,7 @@ public class Exercicio06 {
 		String[][] tabuleiro = new String[3][3];
 		String jogador1, jogador2, letra;
 		int jogador, count, linha = 0, coluna = 0;
-		boolean gameOver = false, linhaCorreta = false, colunaCorreta = false;
+		boolean gameOver = false, linhaCorreta = false, colunaCorreta = false, validador = false;
 		
 		System.out.println("Informe o nome dos jogadores: ");
 		System.out.print("Jogador 1: ");
@@ -56,30 +56,40 @@ public class Exercicio06 {
 			}
 
 			System.out.println("Jogador " + jogador + ", escolha a linha e a coluna em que deseja jogar(0-2): ");
-			while(!linhaCorreta) {
-				System.out.print("Linha: ");
-				linha = scan.nextInt();
-				if(linha<0 || linha>2) {
-					linhaCorreta = false;
-					System.out.println("Linha incorreta! Informe uma linha entre 0 e 2:");
-				} else {
-					linhaCorreta = true;
+			while(!validador) {
+				while(!linhaCorreta) {
+					System.out.print("Linha: ");
+					linha = scan.nextInt();
+					if(linha<0 || linha>2) {
+						linhaCorreta = false;
+						System.out.println("Linha incorreta! Informe uma linha entre 0 e 2:");
+					} else {
+						linhaCorreta = true;
+					}
 				}
-			}
-			linhaCorreta = false;
-			
-			while(!colunaCorreta) {
-				System.out.print("Coluna: ");
-				coluna = scan.nextInt();
-				if(coluna<0 || coluna>2) {
-					colunaCorreta = false;
-					System.out.println("Coluna incorreta! Informe uma coluna entre 0 e 2:");
-				} else {
-					colunaCorreta = true;
+				linhaCorreta = false;
+							
+				while(!colunaCorreta) {
+					System.out.print("Coluna: ");
+					coluna = scan.nextInt();
+					if(coluna<0 || coluna>2) {
+						colunaCorreta = false;
+						System.out.println("Coluna incorreta! Informe uma coluna entre 0 e 2:");
+					} else {
+						colunaCorreta = true;
+					}
 				}
-			}
-			colunaCorreta = false;
+				colunaCorreta = false;
 
+				if(tabuleiro[linha][coluna] == "X" || tabuleiro[linha][coluna] == "O") {
+					System.out.println("Jogada inválida! Posição já ocupada!");
+					validador = false;
+				} else {
+					validador = true;
+				}
+			}
+			validador = false;
+			
 			for(int i=linha; i< tabuleiro.length; i++) {
 				for(int j = coluna; j<tabuleiro[i].length; j++) {
 					tabuleiro[i][j] = letra;
@@ -117,11 +127,20 @@ public class Exercicio06 {
 						(tabuleiro[0][2] == "O" && tabuleiro[1][1] == "O" && tabuleiro[2][0] == "O") ) {
 				gameOver = true;
 				jogador = 2;
+			} else if(count==9) {
+				gameOver = true;
+				jogador = 3;
 			}
-
+			
 		}
 		
-		System.out.println("O jogador " + jogador + " ganhou!");
+		if(jogador == 1) {
+			System.out.println("O jogador " + jogador1 + " ganhou!");
+		} else if(jogador == 2) {
+			System.out.println("O jogador " + jogador2 + " ganhou!");
+		} else {
+			System.out.println("Jogo empatado!");
+		}
 		for(int i=0; i< tabuleiro.length; i++) {
 			for(int j = 0; j<tabuleiro[i].length; j++) {
 				System.out.print(tabuleiro[i][j]);
