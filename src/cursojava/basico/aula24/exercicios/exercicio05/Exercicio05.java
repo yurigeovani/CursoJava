@@ -1,10 +1,10 @@
-package cursojava.basico.aula24.exercicios;
+package cursojava.basico.aula24.exercicios.exercicio05;
 
 public class Exercicio05 {
 
 	public static void main(String[] args) {
 
-//		5. Cria uma classe para representar uma conta corrente que possui um número,	
+//		5. Criar uma classe para representar uma conta corrente que possui um número,	
 //		  um saldo, um status que informa se ela é especial ou não, um limite.
 
 		ContaCorrente conta = new ContaCorrente();

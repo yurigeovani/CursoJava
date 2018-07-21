@@ -1,10 +1,8 @@
-package cursojava.basico.aula24.exercicios;
+package cursojava.basico.aula27.exercicios.exercicio01;
 
 public class Exercicio01 {
 
 	public static void main(String[] args) {
-
-//		1. Escreva uma classe para representar uma lâmpada que está à venda em um supermercado.	
 
 		Lampada lampada = new Lampada();
 		lampada.modelo = "A60";
@@ -18,7 +16,18 @@ public class Exercicio01 {
 		lampada.tipos = new String[5];
 		lampada.tipos[0] = "Abajur";
 		lampada.tipos[1] = "Lampeões";
-				
+		
+		lampada.ligar();
+		lampada.mostrarEstado();
+		
+		lampada.desligar();
+		lampada.mostrarEstado();
+		
+		lampada.mudarEstado();
+		lampada.mostrarEstado();
+		
+		lampada.mudarEstado();
+		lampada.mostrarEstado();
 	}
 
 }
