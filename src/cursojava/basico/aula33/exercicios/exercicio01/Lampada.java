@@ -8,9 +8,16 @@ public class Lampada {
 	private String cor;
 	private String tipoLuz;
 	private int garantiaMeses;
+//	private String[] tipos;
 	private boolean tipoAbajur;
 	private boolean ligada;
-	
+
+//	public String[] getTipos() {
+//		return tipos;
+//	}
+//	public void setTipos(String[] tipos) {
+//		this.tipos = tipos;
+//	}	
 	public String getModelo() {
 		return modelo;
 	}
@@ -59,6 +66,51 @@ public class Lampada {
 	public void setLigada(boolean ligada) {
 		this.ligada = ligada;
 	}
-
+	
+	
+	
+	public Lampada() {
+	}
+	
+	public Lampada(String modelo, String tensao, int potencia, String cor, String tipoLuz, int garantiaMeses,
+			boolean tipoAbajur, boolean ligada/*, String[] tipos*/) {
+		this.modelo = modelo;
+		this.tensao = tensao;
+		this.potencia = potencia;
+		this.cor = cor;
+		this.tipoLuz = tipoLuz;
+		this.garantiaMeses = garantiaMeses;
+//        this.tipos = tipos;
+		this.tipoAbajur = tipoAbajur;
+		this.ligada = ligada;
+	}
+	
+	
+	public void ligar() {
+		this.setLigada(true);
+	}
+	
+	public void desligar() {
+		this.setLigada(false);
+	}
+	
+	public void mudarEstado() {
+		if(this.isLigada()==false) {
+			this.setLigada(true);
+		} else {
+			this.setLigada(false);
+		}
+	}
+	
+	public void status() {
+		System.out.println(getModelo());
+		System.out.println(getTensao());
+		System.out.println(getPotencia());
+		System.out.println(getCor());
+		System.out.println(getTipoLuz());
+		System.out.println(getGarantiaMeses());
+//		System.out.println(getTipoLuz());
+		System.out.println(isLigada());
+	}
 	
 }
