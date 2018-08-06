@@ -34,11 +34,6 @@ public class Exercicio02 {
 				System.out.print("Informe a operação a ser utilizada: ");
 				operacao = scan.nextInt();
 				
-				if(operacao<1 || operacao>5) {
-					validarOperacao = false;
-				} else {
-					validarOperacao = true;
-				}
 			}
 			
 			switch (operacao) {

@@ -5,9 +5,10 @@ public class ContaCorrente {
 	private int numero;
 	private int agencia;
 	private double saldo;
-	private boolean especial;
 	private double chequeEspecial;
 	private double limite;
+	private boolean validarOperacao;
+	private boolean especial;
 	
 	public ContaCorrente() {
 		this.especial = true;
@@ -39,6 +40,14 @@ public class ContaCorrente {
 
 	public void setAgencia(int agencia) {
 		this.agencia = agencia;
+	}
+
+	public boolean isValidarOperacao() {
+		return validarOperacao;
+	}
+
+	public void setValidarOperacao(boolean operacao) {
+		this.validarOperacao = operacao;
 	}
 
 	public double getSaldo() {
@@ -73,20 +82,26 @@ public class ContaCorrente {
 		this.limite = limite;
 	}
 
-	boolean escolherOperacao (int operacao) {
+	//lista as operações
+	void mostrarOperacao () {
 		System.out.println("Operações disponíveis: ");
 		System.out.println("1) Realizar saque");
 		System.out.println("2) Realizar depósito");
 		System.out.println("3) Verificar saldo");
 		System.out.println("4) Verificar limite especial");
 		System.out.println("5) Sair");
-		System.out.print("Informe a operação a ser utilizada: ");	
 		
-		
-		if(operacao<1 || operacao>5) {
-			return false;
+	}
+	
+	//valida a operação escolhida
+	void validarOperacao(int escolhaOperacao) {
+		if(escolhaOperacao<1 || escolhaOperacao>5) {
+			System.out.println("Operação indisponível!");
+			setValidarOperacao(false);
+//			return false;
 		} else {
-			return true;
+			setValidarOperacao(true);
+//			return true;
 		}
 	}
 	

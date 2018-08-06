@@ -29,13 +29,13 @@ public class Exercicio02 {
 		conta.setAgencia(scan.nextInt());
 				
 		while(!sair) {
-			while(!validarOperacao) {
-				conta.escolherOperacao(operacao)(operacao);
-				operacao = scan.nextInt();
-				
+			while(!conta.isValidarOperacao()) {
+				conta.mostrarOperacao();
+				System.out.print("Informe a operação a ser utilizada: ");
+				conta.validarOperacao(scan.nextInt());				
 			}
 			
-			switch (operacao) {
+			switch (conta.) {
 			case 1:
 				System.out.print("Informe o valor: R$ ");
 				conta.realizarSaque(scan.nextDouble());
