@@ -17,10 +17,7 @@ public class Exercicio02 {
 		Scanner scan = new Scanner(System.in);
 		ContaCorrente conta = new ContaCorrente();
 		
-		boolean sair = false;
-		boolean validarOperacao = false;
-		int operacao = 0;
-		
+		boolean sair = false;		
 		
 		System.out.print("Informe o número da conta: ");
 		conta.setNumero(scan.nextInt());
@@ -35,7 +32,7 @@ public class Exercicio02 {
 				conta.validarOperacao(scan.nextInt());				
 			}
 			
-			switch (conta.) {
+			switch (conta.getOperacao()) {
 			case 1:
 				System.out.print("Informe o valor: R$ ");
 				conta.realizarSaque(scan.nextDouble());
@@ -59,7 +56,7 @@ public class Exercicio02 {
 				break;
 			}
 			
-			validarOperacao = false;
+			conta.setValidarOperacao(false);
 		}	
 	}
 }

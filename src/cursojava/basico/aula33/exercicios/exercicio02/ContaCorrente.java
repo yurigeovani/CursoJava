@@ -4,6 +4,7 @@ public class ContaCorrente {
 
 	private int numero;
 	private int agencia;
+	private int operacao;
 	private double saldo;
 	private double chequeEspecial;
 	private double limite;
@@ -13,7 +14,7 @@ public class ContaCorrente {
 	public ContaCorrente() {
 		this.especial = true;
 		this.chequeEspecial = 1000;
-		setLimite(getChequeEspecial()+getSaldo());
+		calcularLimite();
 	}
 
 	public ContaCorrente(int numero, int agencia, double saldo, boolean especial, double chequeEspecial,
@@ -40,6 +41,14 @@ public class ContaCorrente {
 
 	public void setAgencia(int agencia) {
 		this.agencia = agencia;
+	}
+
+	public int getOperacao() {
+		return operacao;
+	}
+
+	public void setOperacao(int operacao) {
+		this.operacao = operacao;
 	}
 
 	public boolean isValidarOperacao() {
@@ -98,11 +107,16 @@ public class ContaCorrente {
 		if(escolhaOperacao<1 || escolhaOperacao>5) {
 			System.out.println("Operação indisponível!");
 			setValidarOperacao(false);
-//			return false;
 		} else {
+			setOperacao(escolhaOperacao);
 			setValidarOperacao(true);
-//			return true;
 		}
+	}
+	
+	//calcular o limite
+	private double calcularLimite() {
+		setLimite(getChequeEspecial()+getSaldo());
+		return this.limite;
 	}
 	
 	boolean realizarSaque(double valorSaque) {
@@ -116,7 +130,7 @@ public class ContaCorrente {
 			if(isEspecial()) {
 				if(valorSaque<=getLimite()) {
 					setSaldo(getSaldo()-valorSaque);
-					setLimite(getChequeEspecial()+getSaldo());
+					calcularLimite();
 					System.out.println("Saque realizado com sucesso!"); // saque realizado
 					System.out.println("Saldo: R$ " + getSaldo());
 					System.out.println("Limite Especial: R$ " + getLimite());
@@ -125,7 +139,7 @@ public class ContaCorrente {
 					System.out.println("Operação não realizada! Saldo insuficiente!");
 					System.out.println("Saldo: R$ " + getSaldo() );
 					System.out.println("Limite Especial: R$ " + getLimite());
-					return false; // não possui saldo em cheque especial
+					return false; // não possui saldo e nem cheque especial
 				}
 			} else {
 				System.out.println("Operação não realizada!");
@@ -137,6 +151,7 @@ public class ContaCorrente {
 
 	void realizarDeposito(double valorDeposito) {
 		setSaldo(getSaldo()+valorDeposito);
+		calcularLimite();
 	}
 	
 	void consultarSaldo(){
@@ -145,7 +160,7 @@ public class ContaCorrente {
 	
 	void verificarLimite() {
 		if(isEspecial()) {
-			setLimite(getChequeEspecial()+getSaldo());
+			calcularLimite();
 			System.out.println("Limite Especial: R$ " + getLimite());
 		} else {
 			System.out.println("Não possui limite especial!");
