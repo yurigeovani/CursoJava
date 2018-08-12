@@ -7,6 +7,7 @@ public class ContaCorrente {
 	private double saldo;
 	private double chequeEspecial;
 	private double limite;
+	private int operacao;
 	private boolean validarOperacao;
 	private boolean especial;
 	
@@ -42,12 +43,20 @@ public class ContaCorrente {
 		this.agencia = agencia;
 	}
 
+	public int getOperacao() {
+		return operacao;
+	}
+
+	public void setOperacao(int operacao) {
+		this.operacao = operacao;
+	}
+
 	public boolean isValidarOperacao() {
 		return validarOperacao;
 	}
 
-	public void setValidarOperacao(boolean operacao) {
-		this.validarOperacao = operacao;
+	public void setValidarOperacao(boolean validarOperacao) {
+		this.validarOperacao = validarOperacao;
 	}
 
 	public double getSaldo() {
@@ -98,10 +107,9 @@ public class ContaCorrente {
 		if(escolhaOperacao<1 || escolhaOperacao>5) {
 			System.out.println("Operação indisponível!");
 			setValidarOperacao(false);
-//			return false;
 		} else {
+			setOperacao(escolhaOperacao);
 			setValidarOperacao(true);
-//			return true;
 		}
 	}
 	
