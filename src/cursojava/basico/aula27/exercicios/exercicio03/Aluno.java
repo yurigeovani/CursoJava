@@ -1,6 +1,6 @@
 package cursojava.basico.aula27.exercicios.exercicio03;
 
-public class Aluno {
+class Aluno {
 
 	String nome;
 	int matricula;
