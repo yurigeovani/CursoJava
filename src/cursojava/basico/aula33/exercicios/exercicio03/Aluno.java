@@ -78,7 +78,7 @@ class Aluno {
 	}
 
 	//lista as informações do aluno
-	void infoAluno() {
+	public void infoAluno() {
 		System.out.println("Aluno: " + getNome());
 		System.out.println("Matrícula: " + getMatricula());
 		System.out.println("Curso: " + getCurso());
@@ -91,7 +91,7 @@ class Aluno {
 		}
 	}
 	
-	double calcularMedia(int indice) {
+	public double calcularMedia(int indice) {
 		double soma = 0, media = 0;
 		for(int i=0; i<getNotasDisciplinas()[indice].length; i++) {
 			soma += getNotasDisciplinas()[indice][i];
@@ -100,7 +100,7 @@ class Aluno {
 		return media;
 	}
 
-	boolean verificarAprovado (int indice) {
+	public boolean verificarAprovado (int indice) {
 		if(calcularMedia(indice)>=7) {
 			return true;
 		} else {

@@ -92,7 +92,7 @@ public class ContaCorrente {
 	}
 
 	//lista as operações
-	void mostrarOperacao () {
+	public void mostrarOperacao () {
 		System.out.println("Operações disponíveis: ");
 		System.out.println("1) Realizar saque");
 		System.out.println("2) Realizar depósito");
@@ -103,7 +103,7 @@ public class ContaCorrente {
 	}
 	
 	//valida a operação escolhida
-	void validarOperacao(int escolhaOperacao) {
+	public void validarOperacao(int escolhaOperacao) {
 		if(escolhaOperacao<1 || escolhaOperacao>5) {
 			System.out.println("Operação indisponível!");
 			setValidarOperacao(false);
@@ -113,7 +113,7 @@ public class ContaCorrente {
 		}
 	}
 	
-	boolean realizarSaque(double valorSaque) {
+	public boolean realizarSaque(double valorSaque) {
 		//verifica se tem saldo na conta
 		if(valorSaque<=getSaldo()) {
 			setSaldo(getSaldo()-valorSaque);
@@ -143,15 +143,15 @@ public class ContaCorrente {
 		}
 	}
 
-	void realizarDeposito(double valorDeposito) {
+	public void realizarDeposito(double valorDeposito) {
 		setSaldo(getSaldo()+valorDeposito);
 	}
 	
-	void consultarSaldo(){
+	public void consultarSaldo(){
 		System.out.println("Saldo atual: R$ " + getSaldo());
 	}
 	
-	void verificarLimite() {
+	public void verificarLimite() {
 		if(isEspecial()) {
 			setLimite(getChequeEspecial()+getSaldo());
 			System.out.println("Limite Especial: R$ " + getLimite());
