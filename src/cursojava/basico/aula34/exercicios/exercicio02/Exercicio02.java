@@ -12,7 +12,7 @@ public class Exercicio02 {
 //		subtrair,	multiplicar,	dividir (dois	números),	elevar	à	potência	n.	
 //		Desenvolva	um	programa	para	testar	essa	classe.
 		
-		imprimir(Calculadora.somar(10, 20));
+		imprimir(Calculadora.somar(1, 2));
 		
 		imprimir(Calculadora.subtrair(2, 1));
 		
@@ -20,7 +20,7 @@ public class Exercicio02 {
 		
 		imprimir(Calculadora.dividir(4, 2));
 		
-		imprimir(Calculadora.elevar(2, 4));
+		imprimir(Calculadora.elevar(2, 3));
 	}
 
 }
