@@ -14,11 +14,21 @@ public class Exercicio01 {
 //		contatos	da	agenda.
 		
 		Scanner scan = new Scanner(System.in);
+		Agenda agenda = new Agenda();
+		Contato[] contatos = new Contato[3];
+		
+		
 		
 		System.out.print("Informe o nome da agenda: ");
-		Agenda.setNome(scan.next());
-		
-		
-	}
+		agenda.setNome(scan.next());
 
+		for(int i = 0; i<3; i++) {
+			System.out.print("Informe o nome do contato " + i + ": ");
+//			contatos.setNome(scan.next());
+			System.out.println("Informe o telefone do contato " + i + ": ");
+			contatos[i].setTelefone(scan.next());
+			System.out.println("Informe o e-mail do contato " + i + ": ");
+			contatos[i].setEmail(scan.next());
+		}
+	}
 }

@@ -1,31 +1,35 @@
 package cursojava.basico.aula36.exercicios.exercicio01;
 
 public class Agenda {
-	private static String nome;
-	private static Contato[] contato;
-	
+	private String nome;
+	private Contato[] contatos;
+
 	public Agenda() {
 	}
 
-	public static String getNome() {
+	public Agenda(String nome, Contato[] contatos) {
+		this.nome = nome;
+		this.contatos = contatos;
+	}
+
+	public String getNome() {
 		return nome;
 	}
-	public static void setNome(String nome) {
-		Agenda.nome = nome;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public static Contato[] getContato() {
-		return contato;
+	public Contato[] getContatos() {
+		return contatos;
 	}
-	public static void setContato(Contato[] contato) {
-		Agenda.contato = contato;
-	}	
-	
-	public static String mostrarContato(String nome) {
-		for(int i=0; i<getContato().length;i++) {
-			if(getContato()[i].getNome()==nome) {
-				return getContato();
+	public void setContatos(Contato[] contatos) {
+		this.contatos = contatos;
+	}
+
+	public void mostrarContato(String nome) {
+//		for(int i=0; i<getContato().length; i++) {
+//			if(nome==getContato()[i].getNome()) {
+//				System.out.println(getContato());
 			}
-		}
-		return getContato();
-	}
+//		}
+//	}
 }

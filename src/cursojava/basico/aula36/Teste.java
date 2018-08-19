@@ -59,9 +59,5 @@ public class Teste {
 				System.out.println(t.getDdd() + " " + t.getNumero());
 			}
 		}
-		
-		
-		
 	}
-
 }
