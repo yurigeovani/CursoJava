@@ -1,18 +1,26 @@
 package cursojava.basico.aula36.exercicios.exercicio01;
 
 public class Contato {
+	private int id;
 	private String nome;
 	private String telefone;
 	private String email;
 	
 	public Contato() {
 	}
-	public Contato(String nome, String telefone, String email) {
+	public Contato(int id, String nome, String telefone, String email) {
+		this.id = id;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.email = email;
 	}
-
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getNome() {
 		return nome;
 	}

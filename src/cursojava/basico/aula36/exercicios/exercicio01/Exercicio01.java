@@ -15,20 +15,42 @@ public class Exercicio01 {
 		
 		Scanner scan = new Scanner(System.in);
 		Agenda agenda = new Agenda();
-		Contato[] contatos = new Contato[3];
+		Contato contatos = new Contato();
+//		String cadastrar = "";
+		int escolha=0;
+		int idContato = 0;
+		boolean sair = false;
 		
 		
 		
 		System.out.print("Informe o nome da agenda: ");
 		agenda.setNome(scan.next());
+		
+		while(!sair) {
+			agenda.mostrarOpcoes();
+			System.out.print("Escolha a opção desejada: ");
+			escolha = scan.nextInt();
 
-		for(int i = 0; i<3; i++) {
-			System.out.print("Informe o nome do contato " + i + ": ");
-//			contatos.setNome(scan.next());
-			System.out.println("Informe o telefone do contato " + i + ": ");
-			contatos[i].setTelefone(scan.next());
-			System.out.println("Informe o e-mail do contato " + i + ": ");
-			contatos[i].setEmail(scan.next());
+			switch(escolha) {
+			case 1:
+				String nome="", email="", telefone="";
+				System.out.print("Nome: ");
+				nome = scan.next();
+				System.out.print("Telefone: ");
+				email = scan.next();
+				System.out.print("E-mail: ");
+				telefone = scan.next();
+				idContato++;
+				break;
+			case 2:
+				System.out.print("Informe o nome:");
+				agenda.consultarContato(scan.next());
+				break;
+			case 3:
+				agenda.listarTodosContatos();
+			default:
+				sair = true;
+			}
 		}
 	}
 }
