@@ -2,11 +2,10 @@ package cursojava.basico.aula36.exercicios.exercicio01;
 
 public class Agenda {
 	private String nome;
-	private Contato[] contatos = new Contato[2];
-	
+	private Contato[] contatos;
+
 	public Agenda() {
 	}
-
 	public Agenda(String nome, Contato[] contatos) {
 		this.nome = nome;
 		this.contatos = contatos;
@@ -32,29 +31,34 @@ public class Agenda {
 		System.out.println("3) Listar todos contatos;");
 		System.out.println("0) SAIR;");
 	}
-	
-	public void cadastrarContato(int id, String nome, String telefone, String email) {
-		contatos[id].setNome(nome);
-		contatos[id].setNome(telefone);
-		contatos[id].setNome(email);
 		
-	}
-	
 	public void consultarContato(String nome) {
-		for (int i=0;i<contatos.length;i++) {
+		for(int i=0; i<contatos.length;i++) {
 			if(nome.equalsIgnoreCase(contatos[i].getNome())) {
-				contatos[i].getNome();
-				contatos[i].getTelefone();
-				contatos[i].getEmail();
+				System.out.println(i+1 + ")	Nome: " + contatos[i].getNome());
+				System.out.println("	Fone: " + contatos[i].getTelefone());
+				System.out.println("	Email: " + contatos[i].getEmail());
 			}
 		}
 	}
-	
+		
 	public void listarTodosContatos() {
-		for(Contato c : getContatos()) {
-			System.out.println("Nome: " + c.getNome());
-			System.out.println("Fone: " + c.getTelefone());
-			System.out.println("Email: " + c.getEmail());
+		for(int i=0; i<contatos.length;i++) {
+			if(contatos[i]!=null && contatos[i].getNome()!=null) {
+				System.out.println(i+1 + ")	Nome: " + contatos[i].getNome());
+			} else {
+				System.out.println(i+1 + ")	Nome: nulo!");
+			}
+			if(contatos[i]!=null && contatos[i].getTelefone()!=null) {
+				System.out.println("	Fone: " + contatos[i].getTelefone());
+			} else {
+				System.out.println("	Fone: nulo!");
+			}
+			if(contatos[i]!=null && contatos[i].getEmail()!=null) {
+				System.out.println("	Email: " + contatos[i].getEmail());
+			} else {
+				System.out.println("	Email: nulo!");
+			}
 		}
 	}
 }
