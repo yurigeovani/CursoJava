@@ -33,32 +33,36 @@ public class Agenda {
 	}
 		
 	public void consultarContato(String nome) {
+		boolean sair = false;
 		for(int i=0; i<contatos.length;i++) {
-			if(nome.equalsIgnoreCase(contatos[i].getNome())) {
+			if(contatos[i]!=null && contatos[i].getNome()!=null && nome.equalsIgnoreCase(contatos[i].getNome())) {
 				System.out.println(i+1 + ")	Nome: " + contatos[i].getNome());
 				System.out.println("	Fone: " + contatos[i].getTelefone());
 				System.out.println("	Email: " + contatos[i].getEmail());
+				sair = true;
 			}
+		}
+		if(!sair){
+			System.out.println("Nenhum contato encontrado!");
 		}
 	}
 		
 	public void listarTodosContatos() {
+		boolean sair = false;
 		for(int i=0; i<contatos.length;i++) {
 			if(contatos[i]!=null && contatos[i].getNome()!=null) {
 				System.out.println(i+1 + ")	Nome: " + contatos[i].getNome());
-			} else {
-				System.out.println(i+1 + ")	Nome: nulo!");
+				sair = true;
 			}
 			if(contatos[i]!=null && contatos[i].getTelefone()!=null) {
 				System.out.println("	Fone: " + contatos[i].getTelefone());
-			} else {
-				System.out.println("	Fone: nulo!");
 			}
 			if(contatos[i]!=null && contatos[i].getEmail()!=null) {
 				System.out.println("	Email: " + contatos[i].getEmail());
-			} else {
-				System.out.println("	Email: nulo!");
 			}
+		}
+		if(!sair){
+			System.out.println("Agenda sem contatos!");
 		}
 	}
 }

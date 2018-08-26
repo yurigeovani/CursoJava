@@ -29,6 +29,8 @@ public class Exercicio01 {
 			agenda.mostrarOpcoes();
 			System.out.print("Escolha a opção desejada: ");
 			escolha = scan.nextInt();
+
+			Contato contato = new Contato();
 			
 			switch(escolha) {
 			case 0:
@@ -36,8 +38,6 @@ public class Exercicio01 {
 				break;
 			case 1:
 				if(indice<3) {
-					Contato contato = new Contato();
-					
 					System.out.print("Nome: ");
 					String nome = scan.next();
 					contato.setNome(nome);
@@ -53,10 +53,12 @@ public class Exercicio01 {
 				}
 				break;
 			case 2:
-				System.out.print("Informe o nome:");
+				agenda.setContatos(contatos);
+				System.out.print("Informe o nome: ");
 				agenda.consultarContato(scan.next());
 				break;
 			case 3:
+				agenda.setContatos(contatos);
 				agenda.listarTodosContatos();
 				break;
 			default:
