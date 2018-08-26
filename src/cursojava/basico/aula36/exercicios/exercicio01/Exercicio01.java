@@ -31,6 +31,7 @@ public class Exercicio01 {
 			escolha = scan.nextInt();
 
 			Contato contato = new Contato();
+			agenda.setContatos(contatos);
 			
 			switch(escolha) {
 			case 0:
@@ -46,19 +47,16 @@ public class Exercicio01 {
 					System.out.print("E-mail: ");
 					contato.setEmail(scan.next());
 					contatos[indice]=contato;
-					agenda.setContatos(contatos);
 					indice++;
 				} else {
 					System.out.println("Agenda lotada!");
 				}
 				break;
 			case 2:
-				agenda.setContatos(contatos);
 				System.out.print("Informe o nome: ");
 				agenda.consultarContato(scan.next());
 				break;
 			case 3:
-				agenda.setContatos(contatos);
 				agenda.listarTodosContatos();
 				break;
 			default:
