@@ -43,10 +43,11 @@ public class Aluno {
 	
 	public void calcularMedia() {
 		for(int i=0; i<notas.length;i++) {
-			media+=getNotas()[i];
+			setMedia(getMedia()+getNotas()[i]);
 		}
-		System.out.println("Média: " + (media/=notas.length));
-		if(media>=7) {
+		setMedia(getMedia()/notas.length);
+		System.out.println("Média: " + getMedia());
+		if(getMedia()>=7) {
 			System.out.println("APROVADO!");
 		} else {
 			System.out.println("REPROVADO");
