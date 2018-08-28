@@ -46,11 +46,12 @@ public class Aluno {
 		for(double nota : notas) {
 			media+=nota;
 		}
-		return media/notas.length;
+		setMedia(media/notas.length);
+		return getMedia();
 	}
 	
 	public void sistuacaoAluno() {
-		if(calcularMedia()>=7) {
+		if(getMedia()>=7) {
 			System.out.println("APROVADO!");
 		} else {
 			System.out.println("REPROVADO!");
