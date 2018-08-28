@@ -56,7 +56,7 @@ public class Exercicio02 {
 			}
 		}
 
-		//TESTE PARA SABER SE AS NOTAS ESTÃO SENDO SETADAS
+		//TESTE PARA SABER SE AS NOTAS ESTÃO SENDO SETADAS:
 		for(int i=0; i<alunos.length;i++) {
 			System.out.println("Aluno " + alunos[i].getNome());
 			for(int j=0; j<alunos[i].getNotas().length; j++) {
