@@ -32,6 +32,7 @@ public class Curso {
 		this.alunos = alunos;
 	}
 
+	
 	public Curso() {
 	}
 	public Curso(String nome, String horario, Professor professor, Aluno[] alunos) {
