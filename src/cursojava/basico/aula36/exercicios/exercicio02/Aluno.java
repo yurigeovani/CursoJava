@@ -50,7 +50,7 @@ public class Aluno {
 		if(getMedia()>=7) {
 			System.out.println("APROVADO!");
 		} else {
-			System.out.println("REPROVADO");
+			System.out.println("REPROVADO!");
 		}
 	}
 }
