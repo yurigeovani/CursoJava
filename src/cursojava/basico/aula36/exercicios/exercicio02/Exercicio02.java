@@ -1,8 +1,8 @@
-package cursojava.basico.aula36.exercicios.exercicio03;
+package cursojava.basico.aula36.exercicios.exercicio02;
 
 import java.util.Scanner;
 
-public class Exercicio03 {
+public class Exercicio02 {
 
 	public static void main(String[] args) {
 
