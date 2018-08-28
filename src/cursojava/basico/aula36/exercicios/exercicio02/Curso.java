@@ -1,4 +1,4 @@
-package cursojava.basico.aula36.exercicios.exercicio03;
+package cursojava.basico.aula36.exercicios.exercicio02;
 
 public class Curso {
 
@@ -40,5 +40,13 @@ public class Curso {
 		this.horario = horario;
 		this.professor = professor;
 		this.alunos = alunos;
+	}
+	
+	public double mediaTurma() {
+		double medTurma=0;
+		for(Aluno med : alunos) {
+			medTurma=med.getMedia();
+		}
+		return medTurma/alunos.length;
 	}
 }

@@ -1,8 +1,8 @@
-package cursojava.basico.aula36.exercicios.exercicio03;
+package cursojava.basico.aula36.exercicios.exercicio02;
 
 import java.util.Scanner;
 
-public class Exercicio03 {
+public class Exercicio02 {
 
 	public static void main(String[] args) {
 
@@ -62,7 +62,10 @@ public class Exercicio03 {
 			for(int j=0; j<alunos[i].getNotas().length; j++) {
 				System.out.println("N" + (j+1) + ": " + alunos[i].getNotas()[j]);
 			}
-			alunos[i].calcularMedia();
+			System.out.println("Média: " + alunos[i].calcularMedia());
+			alunos[i].sistuacaoAluno();
 		}
+		
+		System.out.println("Média turma: " + curso.mediaTurma());
 	}
 }

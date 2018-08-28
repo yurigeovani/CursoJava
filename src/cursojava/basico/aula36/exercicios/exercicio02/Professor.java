@@ -1,4 +1,4 @@
-package cursojava.basico.aula36.exercicios.exercicio03;
+package cursojava.basico.aula36.exercicios.exercicio02;
 
 public class Professor {
 

@@ -1,4 +1,4 @@
-package cursojava.basico.aula36.exercicios.exercicio03;
+package cursojava.basico.aula36.exercicios.exercicio02;
 
 public class Aluno {
 
@@ -40,17 +40,21 @@ public class Aluno {
 		this.notas = notas;
 		this.media = media;
 	}
-	
-	public void calcularMedia() {
-		for(int i=0; i<notas.length;i++) {
-			setMedia(getMedia()+getNotas()[i]);
+		
+	public double calcularMedia() {
+		double media = 0;
+		for(double nota : notas) {
+			media+=nota;
 		}
-		setMedia(getMedia()/notas.length);
-		System.out.println("Média: " + getMedia());
-		if(getMedia()>=7) {
+		return media/notas.length;
+	}
+	
+	public void sistuacaoAluno() {
+		if(calcularMedia()>=7) {
 			System.out.println("APROVADO!");
 		} else {
 			System.out.println("REPROVADO!");
 		}
 	}
+
 }
