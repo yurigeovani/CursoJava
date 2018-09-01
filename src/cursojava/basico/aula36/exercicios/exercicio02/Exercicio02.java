@@ -46,9 +46,10 @@ public class Exercicio02 {
 			System.out.print("Matrícula: ");
 			aluno.setMatricula(scan.nextInt());
 			alunos[i]=aluno;
-
+			
+			//PARA TESTE, O ARRAY SERÁ DE APENAS DUAS NOTAS
 			System.out.println("### NOTAS PARA O ALUNO " + alunos[i].getNome()+ " ###");
-			double notas[] = new double[4];
+			double notas[] = new double[2];
 			for(int j=0; j<notas.length; j++) {
 				System.out.print("N" + (j+1)+": ");
 				notas[j]=scan.nextDouble();

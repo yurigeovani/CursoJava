@@ -42,9 +42,6 @@ public class Agenda {
 				sair = true;
 			}
 		}
-		if(!sair){
-			System.out.println("Nenhum contato encontrado!");
-		}
 	}
 		
 	public void listarTodosContatos() {

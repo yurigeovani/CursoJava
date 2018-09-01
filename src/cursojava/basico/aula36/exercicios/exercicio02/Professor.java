@@ -31,4 +31,4 @@ public class Professor {
 		this.departamento = departamento;
 		this.email = email;
 	}
-} 
+}
