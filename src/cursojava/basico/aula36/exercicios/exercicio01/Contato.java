@@ -1,29 +1,32 @@
 package cursojava.basico.aula36.exercicios.exercicio01;
 
 public class Contato {
+
 	private String nome;
-	private String telefone;
+	private String fone;
 	private String email;
 	
 	public Contato() {
 	}
-	public Contato(String nome, String telefone, String email) {
+
+	public Contato(String nome, String fone, String email) {
+		super();
 		this.nome = nome;
-		this.telefone = telefone;
+		this.fone = fone;
 		this.email = email;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getTelefone() {
-		return telefone;
+	public String getFone() {
+		return fone;
 	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setFone(String fone) {
+		this.fone = fone;
 	}
 	public String getEmail() {
 		return email;

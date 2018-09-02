@@ -1,65 +1,70 @@
 package cursojava.basico.aula36.exercicios.exercicio01;
 
 public class Agenda {
+
 	private String nome;
 	private Contato[] contatos;
-
+	
 	public Agenda() {
 	}
 	public Agenda(String nome, Contato[] contatos) {
+		super();
 		this.nome = nome;
 		this.contatos = contatos;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public Contato[] getContatos() {
 		return contatos;
 	}
+
 	public void setContatos(Contato[] contatos) {
 		this.contatos = contatos;
 	}
 	
 	public void mostrarOpcoes() {
-		System.out.println("###########  MENU  ###########");
-		System.out.println("1) Cadastrar contato;");
-		System.out.println("2) Consultar contato;");
-		System.out.println("3) Listar todos contatos;");
-		System.out.println("0) SAIR;");
+		System.out.println("##################### OPÇÕES #####################");
+		System.out.println("1) Cadastrar;");
+		System.out.println("2) Consultar;");
+		System.out.println("3) Listar todos;");
+		System.out.println("0) Sair;");
+		System.out.print("Informe a opção desejada: ");
 	}
-		
+
 	public void consultarContato(String nome) {
-		boolean sair = false;
-		for(int i=0; i<contatos.length;i++) {
-			if(contatos[i]!=null && contatos[i].getNome()!=null && nome.equalsIgnoreCase(contatos[i].getNome())) {
+		int count = 0;
+		for(int i=0; i<contatos.length; i++) {
+			if(contatos[i]!=null && nome.equalsIgnoreCase(contatos[i].getNome())) {
 				System.out.println(i+1 + ")	Nome: " + contatos[i].getNome());
-				System.out.println("	Fone: " + contatos[i].getTelefone());
+				System.out.println("	Fone: " + contatos[i].getFone());
 				System.out.println("	Email: " + contatos[i].getEmail());
-				sair = true;
+				count++;
 			}
 		}
+		if(count==0) {
+			System.out.println("Nenhum contato encontrado!");
+		}
 	}
-		
-	public void listarTodosContatos() {
-		boolean sair = false;
-		for(int i=0; i<contatos.length;i++) {
+	
+	public void listarContatos() {
+		int count = 0;
+		for(int i=0; i<contatos.length; i++) {
 			if(contatos[i]!=null && contatos[i].getNome()!=null) {
 				System.out.println(i+1 + ")	Nome: " + contatos[i].getNome());
-				sair = true;
-			}
-			if(contatos[i]!=null && contatos[i].getTelefone()!=null) {
-				System.out.println("	Fone: " + contatos[i].getTelefone());
-			}
-			if(contatos[i]!=null && contatos[i].getEmail()!=null) {
+				System.out.println("	Fone: " + contatos[i].getFone());
 				System.out.println("	Email: " + contatos[i].getEmail());
+				count++;
 			}
 		}
-		if(!sair){
-			System.out.println("Agenda sem contatos!");
+		if(count==0) {
+			System.out.println("Nenhum contato cadastrado!");
 		}
 	}
 }

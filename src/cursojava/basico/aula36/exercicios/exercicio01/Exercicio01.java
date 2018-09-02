@@ -14,53 +14,53 @@ public class Exercicio01 {
 //		contatos	da	agenda.
 		
 		Scanner scan = new Scanner(System.in);
-		Agenda agenda = new Agenda();
-		int indice = 0;
-		Contato[] contatos = new Contato[3];
-		int escolha=0;
+		String escolha;
+		int contador = 0;
 		boolean sair = false;
-		
-		
-		
+		Agenda agenda = new Agenda();
+		Contato[] contatos = new Contato[3];
+
 		System.out.print("Informe o nome da agenda: ");
 		agenda.setNome(scan.next());
 		
-		while(!sair) {
-			agenda.mostrarOpcoes();
-			System.out.print("Escolha a op√ß√£o desejada: ");
-			escolha = scan.nextInt();
 
+		while(!sair) {
+			System.out.println("################## AGENDA " + agenda.getNome().toUpperCase() + " ##################");
+			
 			Contato contato = new Contato();
 			agenda.setContatos(contatos);
 			
-			switch(escolha) {
-			case 0:
-				sair = true;
-				break;
-			case 1:
-				if(indice<3) {
+			agenda.mostrarOpcoes();
+			escolha = scan.next();
+			System.out.println("##################################################");
+			switch (escolha) {
+			case "1":
+				if(contador<3) {
+					System.out.println("################# DADOS CONTATO #################");
 					System.out.print("Nome: ");
-					String nome = scan.next();
-					contato.setNome(nome);
-					System.out.print("Telefone: ");
-					contato.setTelefone(scan.next());
-					System.out.print("E-mail: ");
+					contato.setNome(scan.next());
+					System.out.print("Fone: ");
+					contato.setFone(scan.next());
+					System.out.print("Email: ");
 					contato.setEmail(scan.next());
-					contatos[indice]=contato;
-					indice++;
+					contatos[contador]=contato;
+					contador++;
 				} else {
 					System.out.println("Agenda lotada!");
 				}
 				break;
-			case 2:
+			case "2":
 				System.out.print("Informe o nome: ");
 				agenda.consultarContato(scan.next());
 				break;
-			case 3:
-				agenda.listarTodosContatos();
+			case "3":
+				agenda.listarContatos();
+				break;
+			case "0":
+				sair=true;
 				break;
 			default:
-				System.out.println("Op√ß√£o inv√°lida!");
+				System.out.println("Informe uma opÁ„o v·lida!");
 				break;
 			}
 		}
