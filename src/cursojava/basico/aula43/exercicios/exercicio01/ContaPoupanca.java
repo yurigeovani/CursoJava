@@ -18,10 +18,7 @@ public class ContaPoupanca extends ContaBancaria {
 		super(nomeCliente, numConta, saldo);
 	}
 	
-	public void consultarSaldo2() {
-		System.out.println("super.getSaldo = " + super.getSaldo());
-		super.setSaldo(super.getSaldo()+(getDiaRendimento()*super.getSaldo()));
-		System.out.println("calc " + super.getSaldo());
-//		return super.getSaldo();
+	public void consultarSaldo2(double entrada) {
+		
 	}
 }

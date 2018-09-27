@@ -12,10 +12,10 @@ public class Exercicio01 {
 		ContaBancaria conta = new ContaBancaria();
 		ContaPoupanca poupanca = new ContaPoupanca();
 		
-		System.out.println("################## CONTA BANC√ÅRIA ##################");
+		System.out.println("################## CONTA BANC¡RIA ##################");
 		System.out.print("Nome: ");
 		conta.setNomeCliente(scan.nextLine());
-		System.out.print("N√∫mero: ");
+		System.out.print("N˙mero: ");
 		conta.setNumConta(scan.nextInt());
 		
 		while(!sair) {
@@ -37,14 +37,15 @@ public class Exercicio01 {
 				break;
 			case 4:
 				System.out.print("Informe o percentual de rendimento ao dia: ");
-				poupanca.setDiaRendimento(scan.nextDouble());
-				poupanca.consultarSaldo2();
+//				poupanca.setDiaRendimento(scan.nextDouble());
+				double teste2 = scan.nextDouble();
+				poupanca.consultarSaldo2(teste2);
 				break;
 			case 0:
 				sair = true;
 				break;
 			default:
-				System.out.println("Informe uma op√ß√£o v√°lida!");
+				System.out.println("Informe uma opÁ„o v·lida!");
 				break;
 			}
 		}
