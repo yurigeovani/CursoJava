@@ -49,13 +49,13 @@ public class ContaBancaria {
 	}
 	
 	public void opcoes() {
-		System.out.println("################## OPÇÕES ##################");
+		System.out.println("################## OPÃ‡Ã•ES ##################");
 		System.out.println("1) Sacar;");
 		System.out.println("2) Depositar;");
 		System.out.println("3) Consultar saldo;");
 		System.out.println("4) Aplicar rendimento;");
 		System.out.println("0) SAIR;");
-		System.out.print("Escolha a opção desejada: ");
+		System.out.print("Escolha a opÃ§Ã£o desejada: ");
 	}
 	
 	public double consultarSaldo() {

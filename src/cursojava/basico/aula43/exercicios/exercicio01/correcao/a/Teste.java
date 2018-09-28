@@ -1,4 +1,4 @@
-package cursojava.basico.aula43.exercicios.exercicio01.correcao;
+package cursojava.basico.aula43.exercicios.exercicio01.correcao.a;
 
 public class Teste {
 
@@ -19,10 +19,10 @@ public class Teste {
 		System.out.println(contaSimples);
 
 		
-		System.out.println("### Teste ContaPoupanÁa ###");
+		System.out.println("### Teste ContaPoupan√ßa ###");
 		
 		ContaPoupanca contaPoupanca = new ContaPoupanca();
-		contaPoupanca.setNomeCliente("Cliente Conta PoupanÁa");
+		contaPoupanca.setNomeCliente("Cliente Conta Poupan√ßa");
 		contaPoupanca.setNumConta("22222");
 		contaPoupanca.setDiaRendimento(29);
 		
@@ -33,9 +33,9 @@ public class Teste {
 		realizarSaque(contaPoupanca, 70);
 		
 		if(contaPoupanca.calcularNovoSaldo(0.5)) {
-			System.out.println("Rendimento aplicado, novo saldo È de R$ " + contaPoupanca.getSaldo());
+			System.out.println("Rendimento aplicado, novo saldo √© de R$ " + contaPoupanca.getSaldo());
 		} else {
-			System.out.println("Hoje n„o È dia de rendimento! Novo saldo n„o calculado!" );
+			System.out.println("Hoje n√£o √© dia de rendimento! Novo saldo n√£o calculado!" );
 		}
 		
 		System.out.println(contaPoupanca);
@@ -44,7 +44,7 @@ public class Teste {
 		System.out.println("### Teste ContaEspecial ###");
 		
 		ContaEspecial contaEspecial = new ContaEspecial();
-		contaEspecial.setNomeCliente("Cliente Conta PoupanÁa");
+		contaEspecial.setNomeCliente("Cliente Conta Poupan√ßa");
 		contaEspecial.setNumConta("77777");
 		contaEspecial.setLimite(50);
 		

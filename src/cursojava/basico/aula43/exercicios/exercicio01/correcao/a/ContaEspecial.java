@@ -1,4 +1,4 @@
-package cursojava.basico.aula43.exercicios.exercicio01.correcao;
+package cursojava.basico.aula43.exercicios.exercicio01.correcao.a;
 
 public class ContaEspecial extends ContaBancaria{
 
