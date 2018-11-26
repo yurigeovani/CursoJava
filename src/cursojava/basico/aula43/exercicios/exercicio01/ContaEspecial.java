@@ -23,8 +23,9 @@ public class ContaEspecial extends ContaBancaria {
 	}
 	
 	public void sacar(double valor) {
+		double saldoLimite = getSaldo()+getLimite();
 		setLimite(0-valor);
-		if(getSaldo()<=0 || valor<getSaldo()) {
+		if(getSaldo()<=getLimite() || valor<getSaldo()) {
 			System.out.println("Sem saldo disponível!");
 		} else {
 			setSaldo(getSaldo()-valor);
