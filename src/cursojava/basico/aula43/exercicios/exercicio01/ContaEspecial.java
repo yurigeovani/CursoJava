@@ -3,6 +3,7 @@ package cursojava.basico.aula43.exercicios.exercicio01;
 public class ContaEspecial extends ContaBancaria {
 
 	private double limite;
+	private boolean existe;
 	
 	public ContaEspecial(double limite) {
 		super();
@@ -21,12 +22,17 @@ public class ContaEspecial extends ContaBancaria {
 	public void setLimite(double limite) {
 		this.limite = limite;
 	}
-	
+	public boolean isExiste() {
+		return existe;
+	}
+	public void setExiste(boolean existe) {
+		this.existe = existe;
+	}
+
 	public void sacar(double valor) {
-		double saldoLimite = getSaldo()+getLimite();
-		setLimite(0-valor);
-		if(getSaldo()<=getLimite() || valor<getSaldo()) {
-			System.out.println("Sem saldo disponÌvel!");
+		setLimite(-500);
+		if(valor>(getSaldo()-getLimite())) {
+			System.out.println("Sem saldo dispon√≠vel!");
 		} else {
 			setSaldo(getSaldo()-valor);
 			System.out.println("Saque de " + valor + " realizado!");

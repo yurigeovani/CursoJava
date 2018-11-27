@@ -41,8 +41,8 @@ public class ContaBancaria {
 	}
 	
 	public void sacar(double valor) {
-		if(getSaldo()<=0 || valor<getSaldo()) {
-			System.out.println("Sem saldo dispon�vel!");
+		if(getSaldo()<=0 || valor>getSaldo()) {
+			System.out.println("Sem saldo disponível!");
 		} else {
 			setSaldo(getSaldo()-valor);
 			System.out.println("Saque de " + valor + " realizado!");
@@ -51,6 +51,23 @@ public class ContaBancaria {
 	
 	public void depositar (double valor) {
 		setSaldo(getSaldo()+valor);
-		System.out.println("Dep�sito de " + valor + " realizado!");
+		System.out.println("Depósito de " + valor + " realizado!");
+	}
+	
+	public void menu() {
+		System.out.println("################## BANCO MIND ##################");
+		System.out.println("OPÇÕES:");
+		System.out.println("1) Criar conta poupança:");
+		System.out.println("2) Criar conta especial:");
+	}
+	
+	public void opcaoEscolhida (int escolha) {
+		switch (escolha) {
+		case 1:
+			
+			break;
+		default:
+			break;
+		}
 	}
 }
