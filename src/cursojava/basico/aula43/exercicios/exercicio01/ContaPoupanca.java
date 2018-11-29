@@ -29,9 +29,8 @@ public class ContaPoupanca extends ContaBancaria {
 	public void setExiste(boolean existe) {
 		this.existe = existe;
 	}
-
-	public double calcularNovoSaldo() {
+	
+	public void calcularNovoSaldo() {
 		super.setSaldo(super.getSaldo()*getDiaRendimento());
-		return super.getSaldo();
 	}
 }

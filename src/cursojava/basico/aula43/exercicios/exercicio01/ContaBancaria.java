@@ -61,6 +61,10 @@ public class ContaBancaria {
 		System.out.println("2) Criar conta especial:");
 	}
 	
+	public void consultarSaldo() {
+		System.out.println("Saldo: R$ " + getSaldo());
+	}
+	
 	public void opcaoEscolhida (int escolha) {
 		switch (escolha) {
 		case 1:
