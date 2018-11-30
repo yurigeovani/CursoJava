@@ -5,6 +5,8 @@ public class ContaBancaria {
 	private String nomeCliente;
 	private int numConta;
 	private double saldo;
+	private ContaEspecial especial;
+	private ContaPoupanca poupanca;
 	
 	public ContaBancaria() {
 		super();
@@ -34,7 +36,19 @@ public class ContaBancaria {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
-	
+	public ContaEspecial getEspecial() {
+		return especial;
+	}
+	public void setEspecial(ContaEspecial especial) {
+		this.especial = especial;
+	}
+	public ContaPoupanca getPoupanca() {
+		return poupanca;
+	}
+	public void setPoupanca(ContaPoupanca poupanca) {
+		this.poupanca = poupanca;
+	}
+
 	@Override
 	public String toString() {
 		return "ContaBancaria [nomeCliente=" + nomeCliente + ", numConta=" + numConta + ", saldo=" + saldo + "]";
@@ -42,7 +56,7 @@ public class ContaBancaria {
 	
 	public void sacar(double valor) {
 		if(getSaldo()<=0 || valor>getSaldo()) {
-			System.out.println("Sem saldo disponÃ­vel!");
+			System.out.println("Sem saldo disponível!");
 		} else {
 			setSaldo(getSaldo()-valor);
 			System.out.println("Saque de " + valor + " realizado!");
@@ -51,14 +65,20 @@ public class ContaBancaria {
 	
 	public void depositar (double valor) {
 		setSaldo(getSaldo()+valor);
-		System.out.println("DepÃ³sito de " + valor + " realizado!");
+		System.out.println("Depósito de " + valor + " realizado!");
 	}
 	
 	public void menu() {
 		System.out.println("################## BANCO MIND ##################");
-		System.out.println("OPÃ‡Ã•ES:");
-		System.out.println("1) Criar conta poupanÃ§a:");
+		System.out.println("OPÇÕES:");
+		if(poupanca.isExiste()) {
+			
+		} else {
+			System.out.print("Deseja criar agora? [S/N]");
+		}
+		System.out.println("1) Criar conta poupança:");
 		System.out.println("2) Criar conta especial:");
+		System.out.println("0) Sair:");
 	}
 	
 	public void consultarSaldo() {

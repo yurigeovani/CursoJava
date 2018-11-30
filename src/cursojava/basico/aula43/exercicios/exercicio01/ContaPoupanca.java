@@ -3,7 +3,7 @@ package cursojava.basico.aula43.exercicios.exercicio01;
 public class ContaPoupanca extends ContaBancaria {
 	
 	private double diaRendimento;
-	private boolean existe;
+	private boolean existe = false;
 	
 	public ContaPoupanca(double diaRendimento) {
 		super();

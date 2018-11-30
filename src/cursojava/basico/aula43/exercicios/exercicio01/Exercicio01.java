@@ -8,13 +8,13 @@ public class Exercicio01 {
 
 		Scanner scan = new Scanner(System.in);
 		ContaBancaria conta = new ContaBancaria();
-		ContaPoupanca poupanca = new ContaPoupanca();
-		ContaEspecial especial = new ContaEspecial();
+//		ContaPoupanca poupanca = new ContaPoupanca();
+//		ContaEspecial especial = new ContaEspecial();
 		
 
 		System.out.println("######################## BANCO MIND ########################");
 		conta.menu();
-		System.out.print("Selecione a opÃ§Ã£o desejada: ");
+		System.out.print("Selecione a opção desejada: ");
 		conta.opcaoEscolhida(scan.nextInt());
 		
 
