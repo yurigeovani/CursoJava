@@ -4,18 +4,20 @@ public class Exercicio01 {
 
 	public static void main(String[] args) {
 
-		System.out.println("### Teste Conta Bancária ###");
-		ContaBancaria contaSimples = new ContaBancaria();
-		contaSimples.setNomeCliente("Cliente conta simples");
-		contaSimples.setNumConta("122");
+		System.out.println("### Teste Conta Especial ###");
+		ContaEspecial ContaEspecial = new ContaEspecial();
+		ContaEspecial.setNomeCliente("Cliente conta especial");
+		ContaEspecial.setNumConta("2121");
+		ContaEspecial.setLimite(50);
 		
-		contaSimples.depositar(100);
+		ContaEspecial.depositar(100);
 		
-		realizarSaque(contaSimples, 50);
+		realizarSaque(ContaEspecial, 50);
 		
-		realizarSaque(contaSimples, 70);
-		
-		System.out.println(contaSimples);
+		realizarSaque(ContaEspecial, 70);
+		realizarSaque(ContaEspecial, 80);
+				
+		System.out.println(ContaEspecial);
 	}
 	
 	private static void realizarSaque (ContaBancaria conta, double valor) {
