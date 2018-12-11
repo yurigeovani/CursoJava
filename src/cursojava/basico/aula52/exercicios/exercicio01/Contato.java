@@ -2,15 +2,14 @@ package cursojava.basico.aula52.exercicios.exercicio01;
 
 public class Contato {
 
+	private static int contador = 0;
 	private int id;
 	private String nome;
 	private String fone;
+	private String email;
 
 	public int getId() {
 		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
 	}
 	public String getNome() {
 		return nome;
@@ -24,20 +23,20 @@ public class Contato {
 	public void setFone(String fone) {
 		this.fone = fone;
 	}
-	
-	public Contato(int id, String nome, String fone) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.fone = fone;
+	public String getEmail() {
+		return email;
 	}
-	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public Contato() {
-		super();
+		contador++;
+		id = contador;
 	}
 	
 	@Override
 	public String toString() {
-		return "Contato [id=" + id + ", nome=" + nome + ", fone=" + fone + "]";
+		return "Contato [id=" + id + ", nome=" + nome + ", fone=" + fone + ", email=" + email + "]";
 	}
 }
