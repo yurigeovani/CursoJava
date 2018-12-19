@@ -6,7 +6,7 @@ public class Exercicio01 {
 
 	public static void main(String[] args) {
 
-//		24 MINUTOS DO VÍDEO https://www.youtube.com/watch?time_continue=1&v=tc48uwR9Qto
+//		30  MINUTOS DO V�DEO https://www.youtube.com/watch?time_continue=1&v=tc48uwR9Qto
 //		Escreva	uma	classe Contato que	contenha	nome,	telefone	e	um	
 //		identificador. Esse	identificador	deve	ser	gerado	automaticamente	pela	
 //		classe	através	de	um	contador	(cada	vez	que	um	Contato	é	criado	o	
@@ -25,6 +25,14 @@ public class Exercicio01 {
 		Scanner scan = new Scanner(System.in);
 		
 		int opcao = obterOpcaoMenu(scan);
+		
+		if(opcao == 1) { //Consultar Contato
+			
+		} else if(opcao == 2) { //Adicionar Contato
+			
+		} else if (opcao ==3) { //Sair
+			System.exit(0);
+		}
 	}
 
 	public static int obterOpcaoMenu(Scanner scan) {
@@ -43,10 +51,10 @@ public class Exercicio01 {
 				String entrada = scan.nextLine();
 				opcao = Integer.parseInt(entrada);
 				
-				if(opcao != 1 || opcao != 2 || opcao != 3) {
-					throw new Exception("Entrada inválida! Digite novamente!");
-				} else {
+				if(opcao == 1 || opcao == 2 || opcao == 3) {
 					entradaValida = true;
+				} else {
+					throw new Exception("Entrada inv�lida! Digite novamente!");
 				}
 			}
 			
